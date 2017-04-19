@@ -1,0 +1,29 @@
+<template name="footer">
+ 
+<view class="footer">
+    <navigator class="list list-selected" url="/pages/index/index" hover-class="">
+    <text class="iconfont icon-home"></text>
+    <text class="">首页</text>
+    </navigator>
+
+    <navigator class="list" url="/pages/discover/discover" hover-class="">
+    <text class="iconfont icon-descover"></text>
+    <text class="">发现</text>
+    </navigator>
+
+    <navigator class="list ">
+    <view class="camera"></view>
+    <text class="iconfont icon-camera camera-font"></text>
+    </navigator>
+
+    <navigator class="list" url="/pages/me/me" hover-class="">
+     <text class="iconfont icon-me"></text>
+    <text class="">我的</text>
+    </navigator>
+
+    <navigator class="list" url="/pages/login/login" hover-class="">
+     <text class="iconfont icon-exit"></text>
+    <text class="">退出</text>
+</navigator>
+</view>
+</template>

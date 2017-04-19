@@ -1,0 +1,154 @@
+
+::after,::before{
+	margin: 0;
+	padding: 0;
+	/*清除移动端默认点击高亮显示*/
+	-webkit-tap-highlight-color: transparent;
+	/*设置所有都是以边框开始计算宽度*/
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input,button{
+	border: none;
+	outline: none;
+	/*清除移动端的默认表单样式*/
+	-webkit-appearance: none;
+}
+.f-left{
+	float: left;
+}
+.f-right{
+	float: right;
+}
+.clearfix{
+	display: table;/*触发bfc，让其具有包裹性*/
+}
+.clearfix::after,.clearfix::before{
+	content: "";
+	height: 0;
+	line-height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+.top{
+  width: 100%;
+  height: 192rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.header{
+    width: 100%;
+    height: 105rpx;
+    background-color:#8968cd;
+    overflow:hidden;
+}
+.qiehuan{
+  margin: 0 auto;
+  height: 71rpx;
+  margin-top: 26rpx;
+}
+.redian,.guanzhu{
+  width: 143rpx;
+  height: 59rpx;
+  color: #fff;
+  font-size: 35rpx;
+  line-height: 59rpx;
+  text-align: center;
+  border-radius:59rpx 0 0 59rpx;
+  background-color: #3dd067;
+  opacity: 0.7;
+}
+.guanzhu{
+  border-radius: 0 59rpx 59rpx 0;
+}
+.rg-selected{
+ background-color:#00ffff;
+ opacity:1;
+ color:#0000ff;
+
+}
+.nav{
+  height: 87rpx;
+  display: flex;
+  text-align: center;
+  line-height: 87rpx;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+}
+.content{
+  padding-top: 192rpx;
+  padding-bottom: 105rpx;
+}
+.nav-item{flex:1;
+ border-bottom: 1rpx solid #d9d9d9;
+ color:#666;
+}
+.nav-selected{
+  border-bottom: 8rpx solid #EE00EE;
+  color: 	#EE00EE;
+}
+.img-ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.img-li{
+    margin-top: 13rpx;
+    width: 48%;
+    border: 1rpx solid #e5e5e5;
+}
+.img-li .img-text{
+  height: 72rpx;
+  line-height: 72rpx;
+  padding-left: 28rpx;
+}
+.slide-image{
+    width: 100%;
+    display: block;
+}
+.navActive{
+  background: #e7e7e7;
+}
+
+.footer{
+  width: 100%;
+  height: 105rpx;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;left: 0;
+  text-align: center;
+  border-top: 1rpx solid #d9d9d9;
+  z-index: 999;
+  background-color: #fff;
+}
+.footer .list{
+  height: 105rpx;
+  flex: 1;
+  color:#ddd;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.footer .list-selected{
+  color:#0dc441;
+}
+.camera{
+  height: 121rpx;
+  width: 121rpx;
+  border: 1rpx solid #d9d9d9;
+	border-radius: 50%;
+  position: absolute;
+	bottom: 0;
+  z-index: -1;
+	left:315rpx; 
+  background: #fff;
+  font-size: 64rpx;
+}
+.camera-font{
+    font-size: 60rpx;
+    margin-bottom: 25rpx;
+}

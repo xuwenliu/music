@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "Hello Music",
+    "enablePullDownRefresh":true,
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor":"#1C86EE",
+    "navigationBarTextStyle":"white"
+}

@@ -1,0 +1,89 @@
+<!--导入模板-->
+<import src="../../utils/template/footer.wxml" />
+
+
+<!--index.wxml-->
+<view class="top">
+  <view class="header">
+		<view class="clearfix qiehuan">
+			<view class="rg-selected f-left redian">歌手</view>
+			<view class="f-right guanzhu">歌单</view>
+		</view>
+	</view>
+
+
+  <view class="nav">
+    <view class="nav-item {{navselected==0?'nav-selected':''}}" bindtap="changeNav" data-navidx="0" hover hover-class="navActive">嗨爆DJ</view>
+    <view class="nav-item {{navselected==1?'nav-selected':''}}" bindtap="changeNav" data-navidx="1" hover hover-class="navActive">车载音乐</view>
+    <view class="nav-item {{navselected==2?'nav-selected':''}}" bindtap="changeNav" data-navidx="2" hover hover-class="navActive">网络红歌</view>
+  </view>
+</view>
+
+
+<view class="content">
+  <swiper class="swiper" style="height:405px" bindchange="swiperChange" current="{{navselected}}">
+  
+  <!--嗨爆DJ-->
+  <block>
+    <swiper-item>
+     <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;" scroll-top="{{scrollTop}}" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad">
+      <view class="img-ul">
+        <view class="img-li" wx:for="{{lists}}" wx:key="{{index}}">
+          <image mode="widthFix" src="{{item.img}}" class="slide-image"/>
+          <view class="img-text">{{item.title}}</view>
+          </view>
+        </view>
+        <loading hidden="{{hidden}}" bindchange="loadingChange">加载更多...</loading>
+        </scroll-view>
+      </swiper-item>
+    </block>
+
+    <!--车载音乐-->
+  <block>
+    <swiper-item>
+     <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;" scroll-top="{{scrollTop}}" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad">
+      <view class="img-ul">
+        <view class="img-li" wx:for="{{lists}}" wx:key="{{index}}">
+          <image mode="widthFix" src="{{item.img}}" class="slide-image"/>
+          <view class="img-text">{{item.title}}</view>
+          </view>
+        </view>
+        <loading hidden="{{hidden}}" bindchange="loadingChange">加载更多...</loading>
+        </scroll-view>
+      </swiper-item>
+    </block>
+    <!--网络红歌-->
+  <block>
+    <swiper-item>
+     <scroll-view scroll-y="true" style="height:{{scrollHeight}}px;" scroll-top="{{scrollTop}}" bindscrolltolower="bindDownLoad" bindscrolltoupper="topLoad">
+      <view class="img-ul">
+        <view class="img-li" wx:for="{{lists}}" wx:key="{{index}}">
+          <image mode="widthFix" src="{{item.img}}" class="slide-image"/>
+          <view class="img-text">{{item.title}}</view>
+          </view>
+        </view>
+        <loading hidden="{{hidden}}" bindchange="loadingChange">加载更多...</loading>
+        </scroll-view>
+      </swiper-item>
+    </block>
+
+
+
+
+  </swiper>
+</view>
+
+
+
+ 
+
+
+ 
+
+
+<template is="footer"/>
+
+
+
+
+
